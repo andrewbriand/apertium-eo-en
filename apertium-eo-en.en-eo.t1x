@@ -234,7 +234,7 @@
     <def-cat n="do">
       <cat-item lemma="do" tags="vbdo.*"/>
       <cat-item lemma="do" tags="vblex.pri.*"/><!--ATENTU, nur nun ĉar la tagger eraras. -->
-      <cat-item lemma="do" tags="vblex.pres"/>
+      <cat-item lemma="do" tags="vblex.pres.*"/>
       <cat-item lemma="do" tags="vblex.past"/>
       <cat-item lemma="do" tags="vblex.inf"/>
     </def-cat>
@@ -624,7 +624,7 @@
 
   <section-def-macros>
 
-  <!-- ekzamenas la vorton kaj metas majuskligajn informojn en variablo "firstWord" -->
+  <!-- ekzamenas la vorton kaj metas majuskligajn informojn en variablo "caseFirstWord" -->
   <def-macro n="firstWord" npar="1">
     <choose>
       <when>
