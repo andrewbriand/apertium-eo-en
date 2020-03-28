@@ -28,6 +28,10 @@
     <def-cat n="de">
       <cat-item lemma="de" tags="pr"/>
     </def-cat>
+     
+    <def-cat n="por">
+      <cat-item lemma="por" tags="pr"/>
+    </def-cat>
 
     <def-cat n="antaŭ">
       <cat-item lemma="antaŭ" tags="pr"/>
@@ -173,6 +177,10 @@
  <def-cat n="c_ĉu">
   <cat-item lemma="ĉu" tags="adv.itg"/>
  </def-cat>
+   
+    <def-cat n="nekonata">
+      <cat-item tags=""/>
+    </def-cat>
 
     <def-cat n="num_ord">
       <cat-item tags="num.ord"/>
@@ -1041,6 +1049,32 @@ pri konstruo el la tipo 'pli granda', kiu estas sinteza en la angla -->
       </action>
     </rule>
 
+<rule comment="REGULO: POR VERBinf">
+  <pattern>
+    <pattern-item n="por"/>
+    <pattern-item n="c_vb_inf"/>
+  </pattern>
+  <action>
+    <out>
+      <chunk name="pr">
+        <tags>
+          <tag><lit-tag v="PREP"/></tag>
+        </tags>
+        <lu>
+          <lit v="to"/>
+          <lit-tag v="pr"/>
+        </lu>
+        <b/>
+        <lu>
+         <clip pos="2" side="tl" part="lemh"/>
+         <clip pos="2" side="tl" part="a_vrb"/>
+         <lit-tag v="inf"/>
+         <clip pos="2" side="tl" part="lemq"/>
+        </lu>
+      </chunk>
+    </out>
+  </action>
+</rule>
 
 <rule comment="REGULO: DE TEMPO (de/ekde januaro -> from January -- ŝanĝo de prepozicio">
       <pattern>
@@ -4115,7 +4149,7 @@ ERARO: en tiu kazo "not" devus aperi inter lemh kaj lemq
       </action>
     </rule>
 
-    <rule comment="REGULO: DE">
+    <!--<rule comment="REGULO: DE">
       <pattern>
         <pattern-item n="de"/>
       </pattern>
@@ -4134,7 +4168,7 @@ ERARO: en tiu kazo "not" devus aperi inter lemh kaj lemq
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule>-->
 
     <!--<rule comment="REGULO: PREP">
       <pattern>
@@ -4239,6 +4273,33 @@ ERARO: en tiu kazo "not" devus aperi inter lemh kaj lemq
         </out>
       </action>
     </rule>
+    
+    <!--<rule comment="Provi traduki nekonatajn vortojn, ekzemple -gxi vortoj kreitaj de transitivaj verboj">
+      <pattern>
+        <pattern-item n="nekonata"/>
+      </pattern>
+      <action>
+        <choose>
+          <when>
+            <test>
+              <ends-with>
+                <clip pos="1" side="sl" part="lemma"/>
+                <lit v="igxas">
+              </ends-with>
+            </test>
+            <out>
+              <lu>
+                
+              </lu>
+              <b/>
+              <lu>
+
+              </lu>
+            <out>
+          </when>
+        </choose>
+      </action>
+    </rule>-->
 
 
 </section-rules>
