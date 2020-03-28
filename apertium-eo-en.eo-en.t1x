@@ -1056,22 +1056,23 @@ pri konstruo el la tipo 'pli granda', kiu estas sinteza en la angla -->
   </pattern>
   <action>
     <out>
-      <chunk name="pr">
-        <tags>
-          <tag><lit-tag v="PREP"/></tag>
-        </tags>
-        <lu>
-          <lit v="to"/>
-          <lit-tag v="pr"/>
-        </lu>
-        <b/>
-        <lu>
-         <clip pos="2" side="tl" part="lemh"/>
-         <clip pos="2" side="tl" part="a_vrb"/>
-         <lit-tag v="inf"/>
-         <clip pos="2" side="tl" part="lemq"/>
-        </lu>
-      </chunk>
+ <chunk name="vblex_inf">
+   <tags>
+      <tag><lit-tag v="SV"/></tag>
+      <tag><var n="vrb2"/></tag>
+      <tag><clip pos="2" side="tl" part="a_tns"/></tag>
+    </tags>
+    <lu>
+      <lit v="to"/><lit-tag v="pr"/>
+    </lu>
+    <b/>
+    <lu>
+      <clip pos="2" side="tl" part="lemh"/>
+      <clip pos="2" side="tl" part="a_vrb"/>
+      <clip pos="2" side="tl" part="a_tns"/>
+      <clip pos="2" side="tl" part="lemq"/> 
+    </lu> 
+  </chunk>
     </out>
   </action>
 </rule>
