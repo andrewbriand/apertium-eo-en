@@ -4136,7 +4136,7 @@ ERARO: en tiu kazo "not" devus aperi inter lemh kaj lemq
       </action>
     </rule>
 
-    <rule comment="REGULO: PREP">
+    <!--<rule comment="REGULO: PREP">
       <pattern>
         <pattern-item n="pr"/>
       </pattern>
@@ -4155,7 +4155,7 @@ ERARO: en tiu kazo "not" devus aperi inter lemh kaj lemq
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule>-->
 
     <rule comment="REGULO: REL">
       <pattern>
